@@ -10,7 +10,7 @@ jobs:
     runs-on: ubunti-latest
     steps:
       -name: Run custom action
-       uses: ./.github/actions/actions
+       uses: ./.github/actions
   # deploy:
   #   runs-on: ubuntu-latest
   #   steps:
