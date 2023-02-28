@@ -9,10 +9,10 @@ jobs:
   infomation:
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout code
-       uses: actions/checkout@v2
-      -name: Run custom action
-       uses: ./.github/actions
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run custom action
+        uses: ./.github/actions
   # deploy:
   #   runs-on: ubuntu-latest
   #   steps:
