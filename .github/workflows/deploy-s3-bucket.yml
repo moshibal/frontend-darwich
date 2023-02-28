@@ -6,30 +6,21 @@ on:
       - main
 
 jobs:
-  infomation:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run custom action
+      - name: Install dependencies
+        run: npm install
+      - name: Build React app
+        run: npm run build
+      - name: Deploy to S3 Bucket
         uses: ./.github/actions
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
-  #     - name: Install dependencies
-  #       run: npm install
-  #     - name: Build React app
-  #       run: npm run build
-  #     - name: Deploy to S3 Bucket
-  #       uses: jakejarvis/s3-sync-action@master
-  #       with:
-  #         args: --acl public-read --follow-symlinks --delete
-  #       env:
-  #         AWS_S3_BUCKET: my-s3-bucket
-  #         AWS_REGION: us-west-2
-  #         AWS_S3_ENDPOINT: s3.us-west-2.amazonaws.com
-  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         SOURCE_DIR: build/
+        env:
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+        with:
+          bucket: darwich-frontend
+          dist-folder: build/
+          bucket-region: ap-southeast-2
