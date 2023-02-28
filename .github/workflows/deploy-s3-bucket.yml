@@ -9,6 +9,8 @@ jobs:
   infomation:
     runs-on: ubunti-latest
     steps:
+      -name: Checkout code
+       uses: actions/checkout@v2
       -name: Run custom action
        uses: ./.github/actions
   # deploy:
