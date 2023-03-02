@@ -39,7 +39,7 @@ export const register = (registerObject) => {
         },
       };
       const { data } = await axios.post(
-        "/api/users/signup",
+        "http://100.25.211.55/api/api/users/signup",
         registerObject,
         config
       );
