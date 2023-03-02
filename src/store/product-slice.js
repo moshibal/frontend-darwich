@@ -29,7 +29,7 @@ export const fetchProducts = (keyword = "", pageNumber = "") => {
     try {
       dispatch(productRequest());
       const { data } = await axios.get(
-        `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `http://100.25.211.55/api/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       );
 
       dispatch(productSuccess(data));

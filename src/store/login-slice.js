@@ -37,7 +37,7 @@ export const login = (email, password) => {
         },
       };
       const { data } = await axios.post(
-        "/api/users/login",
+        "http://100.25.211.55/api/api/users/login",
         {
           email,
           password,
