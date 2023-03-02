@@ -39,14 +39,14 @@ const Navigation = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <Nav.Link as={Link} to="/login">
+              <Link to="/login">
                 <i className="fa-solid fa-user"></i> Login
-              </Nav.Link>
+              </Link>
             )}
 
-            <Nav.Link as={Link} to="/cart">
+            <Link as={Link} to="/cart">
               <i className="fa-solid fa-cart-shopping"></i> Cart
-            </Nav.Link>
+            </Link>
             {userInfo && userInfo?.data?.isAdmin && (
               <NavDropdown title="Admin" id="adminmenu">
                 <LinkContainer to="/admin/userlist">
