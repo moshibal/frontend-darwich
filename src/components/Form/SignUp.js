@@ -115,7 +115,7 @@ function SignUp() {
         <p>
           Already have an account ?{" "}
           <span className={styles.span}>
-            <a href="/login">Log In</a>
+            <Link to="/login">Log In</Link>
           </span>
         </p>
       </div>
