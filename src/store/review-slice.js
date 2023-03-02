@@ -37,7 +37,7 @@ export const postReview = (productId, reviewObject) => {
         },
       };
       await axios.post(
-        `/api/products/${productId}/review`,
+        `http://100.25.211.55/api/api/products/${productId}/review`,
         reviewObject,
         config
       );

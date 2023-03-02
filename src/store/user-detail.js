@@ -45,7 +45,10 @@ export const getUserDetails = () => {
           Authorization: `Bearer ${userInfo.data.token}`,
         },
       };
-      const { data } = await axios.get("/api/users/me", config);
+      const { data } = await axios.get(
+        "http://100.25.211.55/api/api/users/me",
+        config
+      );
 
       const userdetails = data;
 
@@ -69,7 +72,7 @@ export const updateProfile = (updatingdata = null, updatePassword = null) => {
 
       if (updatingdata) {
         const { data } = await axios.patch(
-          "/api/users/updateMe",
+          "http://100.25.211.55/api/api/users/updateMe",
           updatingdata,
           config
         );
@@ -80,7 +83,7 @@ export const updateProfile = (updatingdata = null, updatePassword = null) => {
 
       if (updatePassword) {
         const { data } = await axios.patch(
-          "/api/users/updatePassword",
+          "http://100.25.211.55/api/api/users/updatePassword",
           updatePassword,
           config
         );

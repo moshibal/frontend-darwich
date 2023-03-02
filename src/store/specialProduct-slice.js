@@ -23,7 +23,9 @@ export const fetchSpecialproduct = () => {
   return async (dispatch) => {
     try {
       dispatch(specialProductLoading());
-      const response = await axios.get("/api/products/special");
+      const response = await axios.get(
+        "http://100.25.211.55/api/api/products/special"
+      );
 
       if (response.status === 200 && Array.isArray(response.data)) {
         dispatch(specialProductSuccess(response.data));

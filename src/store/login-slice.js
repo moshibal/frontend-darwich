@@ -58,7 +58,7 @@ export const login = (email, password) => {
 export const logout = () => {
   return async (dispatch, getState) => {
     try {
-      const res = await axios.get("/api/users/logout");
+      const res = await axios.get("http://100.25.211.55/api/api/users/logout");
       if (res.status === 200) {
         dispatch(deleteUser());
         localStorage.setItem(

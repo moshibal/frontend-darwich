@@ -48,7 +48,7 @@ export const fetchOrder = (orderId) => {
         },
       };
       const { data } = await axios.get(
-        `/api/orders/${orderId}`,
+        `http://100.25.211.55/api/api/orders/${orderId}`,
 
         config
       );

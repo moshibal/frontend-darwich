@@ -39,7 +39,7 @@ export const payOrder = (orderId, paymentResult) => {
         },
       };
       const { data } = await axios.put(
-        `/api/orders/${orderId}/pay`,
+        `http://100.25.211.55/api/api/orders/${orderId}/pay`,
         paymentResult,
         config
       );
@@ -100,7 +100,7 @@ export const deliverOrder = (orderId) => {
       };
 
       const { data } = await axios.put(
-        `/api/orders/${orderId}/deliver`,
+        `http://100.25.211.55/api/api/orders/${orderId}/deliver`,
 
         config
       );

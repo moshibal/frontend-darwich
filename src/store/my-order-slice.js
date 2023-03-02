@@ -32,7 +32,7 @@ export const listMyOrders = () => {
         },
       };
       const { data } = await axios.get(
-        "/api/orders/myorders",
+        "http://100.25.211.55/api/api/orders/myorders",
 
         config
       );
@@ -83,7 +83,7 @@ export const fetchAllOrders = () => {
         },
       };
       const { data } = await axios.get(
-        "/api/orders",
+        "http://100.25.211.55/api/api/orders",
 
         config
       );

@@ -76,7 +76,9 @@ export const fetchProductById = (productId) => {
   return async (dispatch) => {
     try {
       dispatch(productByIdRequest());
-      const { data } = await axios.get(`/api/products/${productId}`);
+      const { data } = await axios.get(
+        `http://100.25.211.55/api/api/products/${productId}`
+      );
 
       dispatch(productByIdSuccess(data));
     } catch (error) {
@@ -119,7 +121,7 @@ export const deleteProduct = (productID) => {
         },
       };
       await axios.delete(
-        `/api/products/${productID}`,
+        `http://100.25.211.55/api/api/products/${productID}`,
 
         config
       );
@@ -177,7 +179,11 @@ export const createProduct = () => {
           Authorization: `Bearer ${userInfo.data.token}`,
         },
       };
-      const { data } = await axios.post(`/api/products`, {}, config);
+      const { data } = await axios.post(
+        `http://100.25.211.55/api/api/products`,
+        {},
+        config
+      );
 
       dispatch(productCreateSuccess(data));
     } catch (error) {
@@ -234,7 +240,7 @@ export const updateProduct = (product) => {
         },
       };
       const { data } = await axios.put(
-        `/api/products/${product._id}`,
+        `http://100.25.211.55/api/api/products/${product._id}`,
         product,
         config
       );
