@@ -30,6 +30,7 @@ const ProductSpecial = () => {
                 availabity={item.availabitity}
                 imageUri={item.imageUri}
                 description={item.description}
+                _id={item._id}
               />
             </Col>
           );
