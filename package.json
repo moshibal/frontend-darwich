@@ -1,5 +1,6 @@
 {
   "name": "frontend",
+  "homepage": "http://darwich-frontend.s3-website-ap-southeast-2.amazonaws.com/",
   "version": "0.1.0",
   "private": true,
   "overrides": {
