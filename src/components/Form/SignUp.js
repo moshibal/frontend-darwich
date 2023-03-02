@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import styles from "./SignUp.module.css";
 import Message from "../Utility/Message";
 import { register } from "../../store/register-slice";
