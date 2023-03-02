@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { logout } from "../../store/login-slice";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -20,7 +21,7 @@ const Navigation = () => {
       className="p-4"
     >
       <Container className="container-fluid d-flex justify-content-between">
-        <Navbar.Brand href="/" className="fs-2">
+        <Navbar.Brand as={Link} to="/" className="fs-2">
           Darwich Meats & CO
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,12 +39,12 @@ const Navigation = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <Nav.Link href="/login">
+              <Nav.Link as={Link} to="/login">
                 <i className="fa-solid fa-user"></i> Login
               </Nav.Link>
             )}
 
-            <Nav.Link href="/cart">
+            <Nav.Link as={Link} to="/cart">
               <i className="fa-solid fa-cart-shopping"></i> Cart
             </Nav.Link>
             {userInfo && userInfo?.data?.isAdmin && (
