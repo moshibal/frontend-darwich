@@ -27,7 +27,9 @@ const ProductDetails = () => {
   useEffect(() => {
     try {
       const fetchProduct = async () => {
-        const response = await axios.get(`/api/products/${productId}`);
+        const response = await axios.get(
+          `http://100.25.211.55/api/api/products/${productId}`
+        );
 
         if (response.status === 200) {
           setProduct(response.data);
