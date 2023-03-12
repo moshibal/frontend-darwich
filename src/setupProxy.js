@@ -6,6 +6,7 @@ module.exports = function (app) {
     createProxyMiddleware({
       target: "http://100.25.211.55/api",
       changeOrigin: true,
+      secure: true,
     })
   );
 };
