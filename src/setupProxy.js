@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "http://100.25.211.55/api",
+      target: "https://api.darwichmeats.com/api",
       changeOrigin: true,
       secure: true,
     })
