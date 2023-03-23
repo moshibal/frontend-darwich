@@ -31,7 +31,6 @@ function App() {
       <Route path="/term" element={<TermScreen />} />
       <Route path="/search/:keyword" element={<ProductScreen />} />
       <Route path="/products/page/:pageNumber" element={<ProductScreen />} />
-
       <Route path="/profile" element={<ProfileScreen />} />
       <Route path="/shipping" element={<ShippingScreen />} />
       <Route path="/payment" element={<PaymentScreen />}></Route>
@@ -39,7 +38,6 @@ function App() {
       <Route path="/order/:orderId" element={<OrderScreen />} />
       <Route path="/products" element={<ProductScreen />} />
       <Route path="/products/:productId" element={<ProductDetailScreen />} />
-
       <Route path="/products/special" element={<SpecialProductScreen />} />
       <Route path="/cart/:productId" element={<CartScreen />} />
       <Route path="/cart" element={<CartScreen />} />
@@ -47,10 +45,8 @@ function App() {
       <Route path="/signup" element={<SignUpScreen />} />
       <Route path="/resetpassword/:token" element={<ResetPasswordScreen />} />
       <Route path="/forgotpassword" element={<ForgotPasswordScreen />} />
-
       <Route path="/admin/userlist/:userId/edit" element={<UserEditScreen />} />
       <Route path="/admin/userlist" element={<UserListScreen />} />
-
       <Route
         path="/admin/productlist/:productId/edit"
         element={<ProductEditScreen />}
