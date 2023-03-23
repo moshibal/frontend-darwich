@@ -29,7 +29,7 @@ export const fetchProducts = (keyword = "", pageNumber = "") => {
     try {
       dispatch(productRequest());
       const { data } = await axios.get(
-        `http://100.25.211.55/api/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `https://api.darwichmeats.com/api/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       );
 
       dispatch(productSuccess(data));
@@ -77,7 +77,7 @@ export const fetchProductById = (productId) => {
     try {
       dispatch(productByIdRequest());
       const { data } = await axios.get(
-        `http://100.25.211.55/api/api/products/${productId}`
+        `https://api.darwichmeats.com/api/api/products/${productId}`
       );
 
       dispatch(productByIdSuccess(data));
@@ -121,7 +121,7 @@ export const deleteProduct = (productID) => {
         },
       };
       await axios.delete(
-        `http://100.25.211.55/api/api/products/${productID}`,
+        `https://api.darwichmeats.com/api/api/products/${productID}`,
 
         config
       );
@@ -180,7 +180,7 @@ export const createProduct = () => {
         },
       };
       const { data } = await axios.post(
-        `http://100.25.211.55/api/api/products`,
+        `https://api.darwichmeats.com/api/api/products`,
         {},
         config
       );
@@ -240,7 +240,7 @@ export const updateProduct = (product) => {
         },
       };
       const { data } = await axios.put(
-        `http://100.25.211.55/api/api/products/${product._id}`,
+        `https://api.darwichmeats.com/api/api/products/${product._id}`,
         product,
         config
       );

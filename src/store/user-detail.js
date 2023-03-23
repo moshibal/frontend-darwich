@@ -46,7 +46,7 @@ export const getUserDetails = () => {
         },
       };
       const { data } = await axios.get(
-        "http://100.25.211.55/api/api/users/me",
+        "https://api.darwichmeats.com/api/api/users/me",
         config
       );
 
@@ -72,7 +72,7 @@ export const updateProfile = (updatingdata = null, updatePassword = null) => {
 
       if (updatingdata) {
         const { data } = await axios.patch(
-          "http://100.25.211.55/api/api/users/updateMe",
+          "https://api.darwichmeats.com/api/api/users/updateMe",
           updatingdata,
           config
         );
@@ -83,7 +83,7 @@ export const updateProfile = (updatingdata = null, updatePassword = null) => {
 
       if (updatePassword) {
         const { data } = await axios.patch(
-          "http://100.25.211.55/api/api/users/updatePassword",
+          "https://api.darwichmeats.com/api/api/users/updatePassword",
           updatePassword,
           config
         );

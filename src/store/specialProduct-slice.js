@@ -24,7 +24,7 @@ export const fetchSpecialproduct = () => {
     try {
       dispatch(specialProductLoading());
       const response = await axios.get(
-        "http://100.25.211.55/api/api/products/special"
+        "https://api.darwichmeats.com/api/api/products/special"
       );
 
       if (response.status === 200 && Array.isArray(response.data)) {

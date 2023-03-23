@@ -144,7 +144,7 @@ export const updateUser = (user) => {
       };
 
       const { data } = await axios.patch(
-        `http://100.25.211.55/api/api/users/${user._id}`,
+        `https://api.darwichmeats.com/api/api/users/${user._id}`,
         user,
         config
       );

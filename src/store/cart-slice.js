@@ -43,7 +43,7 @@ export const cartRequest = (productId, qty) => {
         dispatch(addToCart({ ...checkProductAvailable, qty: qty }));
       }
       const { data } = await axios.get(
-        `http://100.25.211.55/api/api/products/${productId}`
+        `https://api.darwichmeats.com/api/api/products/${productId}`
       );
 
       dispatch(

@@ -48,7 +48,7 @@ export const fetchOrder = (orderId) => {
         },
       };
       const { data } = await axios.get(
-        `http://100.25.211.55/api/api/orders/${orderId}`,
+        `https://api.darwichmeats.com/api/api/orders/${orderId}`,
 
         config
       );
