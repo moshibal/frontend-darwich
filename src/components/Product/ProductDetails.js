@@ -28,7 +28,7 @@ const ProductDetails = () => {
     try {
       const fetchProduct = async () => {
         const response = await axios.get(
-          `https://api.darwichmeats.com/api/api/products/${productId}`
+          `https://api.darwichmeats.com/api/products/${productId}`
         );
 
         if (response.status === 200) {

@@ -39,7 +39,7 @@ export const subscribe = (email) => {
         },
       };
       const res = await axios.post(
-        "https://api.darwichmeats.com/api/api/subscribtion",
+        "https://api.darwichmeats.com/api/subscribtion",
         {
           email,
         },

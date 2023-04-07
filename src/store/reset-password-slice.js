@@ -34,7 +34,7 @@ export const submitResetpassword = (passwordChangeObject, token) => {
       dispatch(resetPasswordLoading());
       //send the email to backend
       const { data } = await axios.patch(
-        `https://api.darwichmeats.com/api/api/users/resetPassword/${token}`,
+        `https://api.darwichmeats.com/api/users/resetPassword/${token}`,
         passwordChangeObject
       );
 

@@ -41,7 +41,7 @@ export const createOrder = (order) => {
         },
       };
       const { data } = await axios.post(
-        "https://api.darwichmeats.com/api/api/orders",
+        "https://api.darwichmeats.com/api/orders",
         order,
         config
       );

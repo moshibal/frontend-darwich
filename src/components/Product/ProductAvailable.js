@@ -7,7 +7,7 @@ const ProductAvailable = () => {
   const [availableProducts, setAvailableProducts] = useState([]);
   const fetchAvailableProducts = async () => {
     const response = await axios.get(
-      "https://api.darwichmeats.com/api/api/products/available"
+      "https://api.darwichmeats.com/api/products/available"
     );
     if (response.status === 200) {
       setAvailableProducts(response.data);

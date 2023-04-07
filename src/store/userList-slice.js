@@ -33,7 +33,7 @@ export const fetchUsersList = () => {
       };
 
       const { data } = await axios.get(
-        "http://100.25.211.55/api/api/users",
+        "https://api.darwichmeats.com/api/users",
 
         config
       );
@@ -84,7 +84,7 @@ export const deleteUser = (id) => {
       };
 
       const { data } = await axios.delete(
-        `http://100.25.211.55/api/api/users/${id}`,
+        `https://api.darwichmeats.com/api/users/${id}`,
 
         config
       );
@@ -144,7 +144,7 @@ export const updateUser = (user) => {
       };
 
       const { data } = await axios.patch(
-        `https://api.darwichmeats.com/api/api/users/${user._id}`,
+        `https://api.darwichmeats.com/api/users/${user._id}`,
         user,
         config
       );
@@ -202,7 +202,7 @@ export const getUserById = (id) => {
       };
 
       const { data } = await axios.get(
-        `http://100.25.211.55/api/api/users/${id}`,
+        `https://api.darwichmeats.com/api/users/${id}`,
 
         config
       );

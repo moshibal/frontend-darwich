@@ -32,7 +32,7 @@ export const listMyOrders = () => {
         },
       };
       const { data } = await axios.get(
-        "https://api.darwichmeats.com/api/api/orders/myorders",
+        "https://api.darwichmeats.com/api/orders/myorders",
 
         config
       );
@@ -83,7 +83,7 @@ export const fetchAllOrders = () => {
         },
       };
       const { data } = await axios.get(
-        "https://api.darwichmeats.com/api/api/orders",
+        "https://api.darwichmeats.com/api/orders",
 
         config
       );

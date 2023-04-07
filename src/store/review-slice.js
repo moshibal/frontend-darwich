@@ -37,7 +37,7 @@ export const postReview = (productId, reviewObject) => {
         },
       };
       await axios.post(
-        `https://api.darwichmeats.com/api/api/products/${productId}/review`,
+        `https://api.darwichmeats.com/api/products/${productId}/review`,
         reviewObject,
         config
       );
