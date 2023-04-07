@@ -29,7 +29,7 @@ export const fetchProducts = (keyword = "", pageNumber = "") => {
     try {
       dispatch(productRequest());
       const { data } = await axios.get(
-        `https://api.darwichmeats.com/api/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `https://api.darwichmeats.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       );
 
       dispatch(productSuccess(data));
