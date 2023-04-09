@@ -29,7 +29,7 @@ const Navigation = () => {
           id="responsive-navbar-nav"
           className=" d-flex justify-content-end"
         >
-          <Nav>
+          <Nav className="me-auto">
             {userInfo && userInfo?.data?.name ? (
               <NavDropdown title={userInfo.data.name} id="username">
                 <NavDropdown.Item href="/profile">My Profile</NavDropdown.Item>

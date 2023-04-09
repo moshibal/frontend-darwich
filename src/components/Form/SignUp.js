@@ -47,7 +47,7 @@ function SignUp() {
   };
   return (
     <form className={styles.form}>
-      <div>
+      <div className="form-div">
         {message && <Message variant="danger">{message}</Message>}
         {registerErrorMessage && (
           <Message variant="danger">{registerErrorMessage}</Message>
@@ -57,7 +57,7 @@ function SignUp() {
             <p>signup successfully🤗🤗</p>
           </Message>
         )}
-        <div>
+        <div className="control-group">
           <label htmlFor="name">Full Name</label>
           <input
             autoFocus
@@ -70,7 +70,7 @@ function SignUp() {
           />
         </div>
 
-        <div>
+        <div className="control-group">
           <label htmlFor="email">Email Address</label>
           <input
             required
@@ -82,7 +82,7 @@ function SignUp() {
           />
         </div>
 
-        <div>
+        <div className="control-group">
           <label htmlFor="password">Password</label>
           <input
             minLength="10"
@@ -97,7 +97,7 @@ function SignUp() {
             the password must be 10 characters long.
           </p>
         </div>
-        <div>
+        <div className="control-group">
           <label htmlFor="passwordCon">Confirm Password</label>
           <input
             minLength="10"

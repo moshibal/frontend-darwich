@@ -28,9 +28,9 @@ function Form() {
   };
   return (
     <form className={styles.form}>
-      <div>
+      <div className="form-div">
         {message && <Message variant="danger">{message}</Message>}
-        <div>
+        <div className="control-group">
           <label htmlFor="email">Email Address</label>
           <input
             autoFocus
@@ -43,7 +43,7 @@ function Form() {
           />
           {emailCheck && <p>{emailCheck}</p>}
         </div>
-        <div>
+        <div className="control-group">
           <label htmlFor="password">Password</label>
           <input
             required

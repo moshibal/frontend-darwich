@@ -45,7 +45,7 @@ input {
   font-size: 2rem;
   display: block;
   margin-bottom: 0.5rem;
-  min-width: 40vw;
+  min-width: 50vw;
   padding: 0.7rem;
   border-radius: 0.5rem;
 }
@@ -70,4 +70,28 @@ h4 {
 i + a {
   text-decoration: none;
   color: black;
+}
+/* media queries for input elements */
+@media only screen and (max-width: 900px) {
+  .form-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .control-group input {
+    max-width: 70vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .form-div {
+    width: 100%;
+    display: block;
+  }
+
+  .control-group input {
+    min-width: 100%;
+  }
 }
