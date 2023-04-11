@@ -57,7 +57,11 @@ const ShippingScreen = () => {
           <p className="fs-2 text-warning">
             At the moment, we are not doing home delivery, You may use{" "}
             <strong>
-              <a href="https://www.doordash.com/en-AU/store/darwich-meats-&-co-greenacre-24510938">
+              <a
+                href="https://www.doordash.com/en-AU/store/darwich-meats-&-co-greenacre-24510938"
+                target="_blank"
+                rel="noreferrer"
+              >
                 DoorDash
               </a>
             </strong>{" "}
