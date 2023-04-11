@@ -38,11 +38,13 @@ export const register = (registerObject) => {
           "Content-Type": "application/json",
         },
       };
+      console.log("register", registerObject);
       const { data } = await axios.post(
-        "hhttps://api.darwichmeats.com/api/users/signup",
+        "https://api.darwichmeats.com/api/users/signup",
         registerObject,
         config
       );
+      console.log(data);
 
       dispatch(registerSuccess({ userData: data }));
       dispatch(loginSuccess({ userData: data }));
